@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Page</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #ffecd2, #fcb69f);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            text-align: center;
+            padding: 40px;
+            background: #ffffffdd;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 450px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            backdrop-filter: blur(5px);
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        h1 {
+            font-size: 90px;
+            color: #ff6e40;
+            font-weight: 800;
+        }
+
+        h2 {
+            margin-top: -10px;
+            font-size: 28px;
+            color: #444;
+            font-weight: 600;
+        }
+
+        p {
+            color: #555;
+            font-size: 16px;
+            margin: 10px 0 25px 0;
+        }
+
+        a {
+            display: inline-block;
+            text-decoration: none;
+            background: #ff6e40;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(255,110,64,0.4);
+            transition: 0.3s;
+        }
+
+        a:hover {
+            background: #ff3d00;
+            box-shadow: 0 8px 20px rgba(255,61,0,0.5);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>404</h1>
+        <h2>Page Not Found</h2>
+        <p>Oops! The page you're looking for doesn't exist or has been moved.</p>
+        <a href="index.html">Go Back Home</a>
+    </div>
+</body>
+</html>

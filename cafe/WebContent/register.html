@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Register</title>
+
+  <style>
+    body{
+      margin:0;
+      min-height:100vh;
+      font-family: Arial, Helvetica, sans-serif;
+
+      /* 🌟 Light Orange Background (Same theme as yesterday) */
+      background: rgb(255,255,255);
+
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:20px;
+    }
+
+    .card{
+      width:100%;
+      max-width:420px;
+      background:white;
+      padding:25px;
+      border-radius:15px;
+      box-shadow:0 8px 25px rgba(0,0,0,0.15);
+    }
+
+    h2{
+      margin:0 0 10px;
+      text-align:center;
+      color:#333;
+    }
+
+    .field{
+      margin-bottom:15px;
+      display:flex;
+      flex-direction:column;
+    }
+
+    label{
+      margin-bottom:5px;
+      font-weight:bold;
+      color:#444;
+    }
+
+    input{
+      padding:12px;
+      border:1px solid #ccc;
+      border-radius:8px;
+      font-size:16px;
+    }
+
+    input:focus{
+      border-color:#f5a06e;
+      outline:none;
+    }
+
+    .btn{
+      width:100%;
+      padding:12px;
+      border:none;
+      border-radius:8px;
+      background:#ff9d6c;
+      color:white;
+      font-size:17px;
+      cursor:pointer;
+      transition:0.2s;
+    }
+
+    .btn:hover{
+      background:#ff8c54;
+    }
+
+    .login-link{
+      text-align:center;
+      margin-top:10px;
+      font-size:14px;
+    }
+
+    .login-link a{
+      color:#ff7f40;
+      text-decoration:none;
+      font-weight:bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>Create Account</h2>
+
+    <form action="register">
+      <div class="field">
+        <label>Name</label>
+        <input type="text" placeholder="Enter your full name" name="name" required>
+      </div>
+
+      <div class="field">
+        <label>Email</label>
+        <input type="email" placeholder="Enter your email" name="email" required>
+      </div>
+
+      <div class="field">
+        <label>Password</label>
+        <input type="password" placeholder="Create a password" name="password" required>
+      </div>
+
+      <div class="field">
+        <label>Phone Number</label>
+        <input type="tel" placeholder="Enter your phone number" name="phno" required>
+      </div>
+
+      <button class="btn" type="submit">Register</button>
+
+      <div class="login-link">
+        Already have an account? <a href="index.html">Login here</a>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>

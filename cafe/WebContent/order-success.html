@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Successful</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #ffeedb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .card {
+            background: #ffffff;
+            width: 420px;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+
+        .tick {
+            font-size: 80px;
+            color: green;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .total {
+            font-size: 22px;
+            color: #d35400;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            background: #ff7b00;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 6px;
+            font-size: 16px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #cc6400;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="tick">✔</div>
+
+        <h2>Order Placed Successfully!</h2>
+        <p>Thank you for ordering from our café.</p>
+
+        <!-- Total amount will be displayed dynamically -->
+        <p class="total">Total: Rs. <span id="amount"></span></p>
+
+        <a href="menu.html" class="btn">Continue Ordering</a>
+    </div>
+
+    <script>
+        // Get total amount from URL
+        const query = new URLSearchParams(window.location.search);
+        document.getElementById("amount").textContent = query.get("total");
+    </script>
+</body>
+</html>

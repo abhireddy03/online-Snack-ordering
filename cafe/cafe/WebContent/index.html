@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Login - CaféExpress</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #FFF8E7; /* Cream background (same as menu page) */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .login-card {
+        background: white;
+        width: 380px;
+        padding: 35px;
+        border-radius: 16px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 26px;
+        color: #5A3A1E; /* Dark brown */
+        margin-bottom: 25px;
+    }
+
+    label {
+        float: left;
+        font-size: 14px;
+        font-weight: bold;
+        color: #5A3A1E;
+        margin-bottom: 5px;
+    }
+
+    input {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #d6d6d6;
+        border-radius: 8px;
+        margin-bottom: 18px;
+        font-size: 15px;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 12px;
+        background: #D87927; /* Café orange */
+        border: none;
+        color: white;
+        font-size: 17px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    .btn:hover {
+        background: #bf6b20;
+    }
+
+    .register-link {
+        margin-top: 18px;
+        font-size: 14px;
+        color: #5A3A1E;
+    }
+
+    .register-link a {
+        color: #D87927;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .register-link a:hover {
+        text-decoration: underline;
+    }
+</style>
+</head>
+<body>
+
+<div class="login-card">
+
+    <h2>Login to <br>CaféExpress</h2>
+
+    <form action="LoginServlet" method="post">
+
+        <label>Email</label>
+        <input type="email" name="email" required>
+
+        <label>Password</label>
+        <input type="password" name="password" required>
+
+        <button class="btn" type="submit">Login</button>
+    </form>
+
+    <div class="register-link">
+        New user? <a href="register.jsp">Register</a>
+    </div>
+
+</div>
+
+</body>
+</html>

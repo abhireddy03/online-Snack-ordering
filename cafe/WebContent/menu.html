@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CaféExpress Menu</title>
+    
+    <style>
+        :root {
+           
+            --light-cream: #FFF8E1; 
+            --brown-text: #5D4037; 
+            --primary-orange: #FF9800; 
+            --card-bg: #FFFFFF; 
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light-cream);
+            color: var(--brown-text);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: var(--light-cream);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .cup-icon {
+            font-size: 28px;
+            vertical-align: middle;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--brown-text);
+            margin-left: 30px;
+            font-size: 18px;
+            padding-bottom: 5px;
+        }
+
+        nav a.active {
+            font-weight: 600;
+            border-bottom: 2px solid var(--brown-text);
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .main-title {
+            font-size: 48px;
+            font-weight: 700;
+            margin: 40px 0 60px 0;
+            color: #3e2723;
+        }
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            padding-bottom: 50px;
+        }
+
+        .menu-item-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            transition: transform 0.2s;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .menu-item-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.12);
+        }
+
+        .menu-item-card img {
+            width: 100%;
+            max-height: 180px;
+            object-fit: contain;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            padding: 10px;
+        }
+
+        .item-details {
+            padding: 0 10px;
+        }
+
+        .item-name {
+            font-size: 22px;
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+
+        .item-price {
+            font-size: 18px;
+            font-weight: 500;
+            color: #a1887f;
+            margin-bottom: 15px;
+        }
+        .add-to-cart-btn {
+            background-color: var(--primary-orange);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            width: 80%;
+            margin-bottom: 10px;
+        }
+
+        .add-to-cart-btn:hover {
+            background-color: #F57C00;
+        }
+    </style>
+   
+
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <span class="cup-icon">☕</span> *Abhi's CaféExpress*
+        </div>
+        <nav>
+            <a href="menu.html" class="active">Menu</a>
+            <a href="viewcart">Cart</a>
+            </nav>
+    </header>
+
+    <main class="container">
+        <h1 class="main-title">Menu</h1>
+			
+        <section class="menu-grid">
+            <form action="add-to-cart" method='post'>
+            <div class="menu-item-card">
+                <img src="assessts/sandwich" alt="Sandwich">
+                <div class="item-details">
+                    <p class="item-name">Sandwich</p>
+                    <p class="item-price">Rs.60</p>
+                    <input type="hidden" value="sandwich" name="name" >
+                    <input type="hidden" value="60" name="price" >
+                 <button class="add-to-cart-btn " name="">Add to Cart</button>
+              </div>
+            </div></form>
+				 <form action="add-to-cart" method='post'>
+            <div class="menu-item-card">
+                <img src="assessts/burger.webp" alt="Burger">
+                <div class="item-details">
+                    <p class="item-name">Burger</p>
+                    <p class="item-price">Rs.80</p>
+                    <input type="hidden" value="Burger" name="name" >
+                    <input type="hidden" value="80" name="price" >
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div></form>
+             <form action="add-to-cart" method='post'>
+            <div class="menu-item-card">
+                <img src="assessts/fries.webp" alt="Fries">
+                <div class="item-details">
+                    <p class="item-name">Fries</p>
+                    <p class="item-price">Rs.50</p>
+                    <input type="hidden" value="Fries" name="name" >
+                    <input type="hidden" value="50" name="price" >
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div></form>
+              <form action="add-to-cart" method='post'>
+            <div class="menu-item-card">
+                <img src="assessts/cooffeee.webp" alt="Coffee">
+                <div class="item-details">
+                    <p class="item-name">Coffee</p>
+                    <p class="item-price">Rs.40</p>
+                     <input type="hidden" value="Coffee" name="name" >
+                    <input type="hidden" value="40" name="price" >
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div></form>
+			 <form action="add-to-cart" method='post'>
+            <div class="menu-item-card">
+                <img src="assessts/tea.webp" alt="Tea">
+                <div class="item-details">
+                    <p class="item-name">Tea</p>
+                    <p class="item-price">Rs.40</p>
+                     <input type="hidden" value="tea" name="name" >
+                    <input type="hidden" value="40" name="price" >
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div></form>
+			<form action="add-to-cart" method='post'>
+            <div class="menu-item-card">
+                <img src="assessts/pastry.webp" alt="Pastry">
+                <div class="item-details">
+                    <p class="item-name">Pastry</p>
+                    <p class="item-price">Rs.35</p>
+                     <input type="hidden" value="Pastry" name="name" >
+                    <input type="hidden" value="35" name="price" >
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div></form>
+
+        </section>
+        
+    </main>
+</body>
+</html>
